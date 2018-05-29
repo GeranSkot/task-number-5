@@ -7,24 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner p = new Scanner(System.in);
-        Scanner o = new Scanner(System.in);
-
-        System.out.println("sentence");
-        String predl = p.nextLine();
-
-        System.out.println("put your word r0ight heeere");
-        String slovo = o.nextLine();
-
+        System.out.println("enter the sentence ");
+        String pr = p.nextLine();
+        System.out.println("enter the word ");
+        String sl = p.nextLine();
         int pos = 0, count = 0;
         do {
-            pos = predl.indexOf(slovo, pos);
+            pos = pr.indexOf(sl, pos);
             if (pos >= 0) {
                 count ++;
-                pos += slovo.length();
+                pos += sl.length();
             }
         } while (pos >= 0);
-
-        System.out.println("sentence: "+predl+". word: "+slovo+". " +
+        System.out.println("sentence: "+pr+". word: "+sl+". " +
                 "count of word: "+count);
     }
 }
